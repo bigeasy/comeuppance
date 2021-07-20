@@ -1,5 +1,5 @@
 require('proof')(2, async (okay) => {
-    const callback = require('..')
+    const { callback } = require('..')
     {
         const [ one, two ] = await callback((callback) => callback(null, 1, 2))
         okay({ one, two }, { one: 1, two: 2 }, 'resolve callback')
